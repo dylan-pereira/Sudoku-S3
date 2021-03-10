@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="720.0" prefWidth="900.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.umontpellier.iut.M3302.UI.RulesController">
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Règles" translateX="100.0" translateY="75.0">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+      </Text>
+   </top>
+   <center>
+      <VBox alignment="CENTER_LEFT" style="-fx-font-size: 19.0;">
+         <BorderPane.margin>
+            <Insets left="20.0" right="30.0"/>
+         </BorderPane.margin>
+         <Text text="Le but du jeu est de remplir toutes les cases avec des chiffres allant de 1 à 9. "/>
+         <Text text="Cependant, un chiffre ne doit figurer qu'une seule fois parmi sa ligne, sa colonne et son carré de 9 cases."/>
+         <Text text="Chaque ligne, chaque colonne et chaque carré de 3x3 cases doivent alors contenir tous les chiffres de 1 à 9."/>
+         <Text text="Plus la difficulté est élevée, plus vous aurez de cases à remplir."/>
+         <Text text="Des indices sont à votre disposition, leur aide varie selon la difficulté du jeu.">
+            <VBox.margin>
+               <Insets top="30.0"/>
+            </VBox.margin>
+         </Text>
+         <Text text="Vous pouvez aussi activer le mode note pour garder en mémoire les éventuels chiffres qui vont dans une case."/>
+         <Text text="Ces règles sont extensibles aux différentes tailles de grille.">
+            <VBox.margin>
+               <Insets top="30.0"/>
+            </VBox.margin>
+         </Text>
+      </VBox>
+   </center>
+   <bottom>
+      <Button text="Retour" BorderPane.alignment="CENTER"
+              mnemonicParsing="false" onMouseClicked="#mainMenu" prefHeight="36.0"
+              prefWidth="100.0" style="-fx-background-color: white;">
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

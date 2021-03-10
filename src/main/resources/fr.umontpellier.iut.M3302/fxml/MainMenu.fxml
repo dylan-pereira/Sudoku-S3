@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fr.umontpellier.iut.M3302.sudoku.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.Integer?>
+<BorderPane style="-fx-background-color: lightblue" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.umontpellier.iut.M3302.UI.MainMenuController">
+    <top>
+        <Text translateX="100.0" translateY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sudoku">
+            <font>
+                <Font name="Calibri Bold" size="50.0"/>
+            </font>
+        </Text>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="BOTTOM_LEFT">
+            <Button fx:id="launchGame" layoutX="390.0" layoutY="250.0" mnemonicParsing="false"
+                    onMouseClicked="#launchGame" prefHeight="36.0" prefWidth="100.0"
+                    style="-fx-background-color: white;" text="Lancer ">
+                <font>
+                    <Font name="System Bold" size="14.0"/>
+                </font>
+            </Button>
+            <HBox alignment="CENTER" fillHeight="false" spacing="10.0" VBox.vgrow="NEVER">
+                <ChoiceBox fx:id="difficulty" value="EASY" layoutX="330.0" layoutY="300.0" prefHeight="36.0"
+                           prefWidth="100.0" style="-fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <Difficulty fx:value="EASY"/>
+                            <Difficulty fx:value="NORMAL"/>
+                            <Difficulty fx:value="HARD"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="size" value="9" layoutX="450.0" layoutY="300.0" prefHeight="36.0" prefWidth="100.0"
+                           style="-fx-background-color: white;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <Integer fx:value="4"/>
+                            <Integer fx:value="9"/>
+                            <Integer fx:value="16"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </HBox>
+            <Button fx:id="rules" layoutX="390.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#rules"
+                    prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: white;" text="Règles">
+                <font>
+                    <Font name="System Bold" size="14.0"/>
+                </font>
+            </Button>
+            <Button fx:id="closeGame" layoutX="390.0" layoutY="400.0" mnemonicParsing="false"
+                    onMouseClicked="#closeGame" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: white;"
+                    text="Quitter">
+                <font>
+                    <Font size="14.0"/>
+                </font>
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>
